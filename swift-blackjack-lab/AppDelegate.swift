@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
      */
     
+    let dealer : Dealer = Dealer()
+    let bettingAmount : UInt = 10
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         /*
@@ -36,6 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      * Write your playBlackjack method in here
      
      */
+    
+    func playBlackjack () {
+        
+        dealer.placeBet(bettingAmount)
+        dealer.player.canPlaceBet(bettingAmount)
+        dealer.deal()
+    }
     
 }
 
